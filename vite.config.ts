@@ -12,4 +12,6 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Automatically configure the Nitro target preset if deploying on Vercel
+  nitro: process.env.VERCEL ? { preset: "vercel" } : true,
 });
