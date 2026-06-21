@@ -140,6 +140,34 @@ function Portfolio() {
   );
 }
 
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  const toggle = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch {}
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label="Toggle theme"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+    >
+      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
+  );
+}
+
 function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
@@ -154,12 +182,15 @@ function Header() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
-        >
-          Let's talk
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="hidden rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
+          >
+            Let's talk
+          </a>
+        </div>
       </div>
     </header>
   );
