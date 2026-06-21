@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import {
   Github,
   Linkedin,
@@ -10,9 +11,10 @@ import {
   Database,
   Cpu,
   Wrench,
-  GraduationCap,
   Briefcase,
   Send,
+  Sun,
+  Moon,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -40,7 +42,6 @@ const NAV = [
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
   { id: "experience", label: "Experience" },
-  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -121,20 +122,6 @@ const EXPERIENCE = [
   },
 ];
 
-const EDUCATION = [
-  {
-    school: "Savitribai Phule Pune University",
-    degree: "B.E. in Computer Engineering",
-    period: "2022 — 2026",
-    detail: "CGPA: 8.7 / 10 · Coursework in DSA, OS, DBMS, ML, Computer Networks.",
-  },
-  {
-    school: "Vidya Niketan Jr. College",
-    degree: "Higher Secondary (PCM + CS)",
-    period: "2020 — 2022",
-    detail: "Percentage: 89% · State board with Computer Science elective.",
-  },
-];
 
 function Portfolio() {
   return (
@@ -146,11 +133,38 @@ function Portfolio() {
         <Skills />
         <Projects />
         <Experience />
-        <Education />
         <Contact />
       </main>
       <Footer />
     </div>
+  );
+}
+
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  const toggle = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("theme", next ? "dark" : "light");
+    } catch {}
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      aria-label="Toggle theme"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:text-foreground hover:bg-secondary"
+    >
+      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    </button>
   );
 }
 
@@ -168,12 +182,15 @@ function Header() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
-        >
-          Let's talk
-        </a>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <a
+            href="#contact"
+            className="hidden rounded-full border border-border bg-secondary px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground sm:inline-flex"
+          >
+            Let's talk
+          </a>
+        </div>
       </div>
     </header>
   );
@@ -416,32 +433,7 @@ function Experience() {
   );
 }
 
-function Education() {
-  return (
-    <Section id="education" eyebrow="05 — Education" title="Academic path">
-      <div className="space-y-5">
-        {EDUCATION.map((e) => (
-          <div
-            key={e.school}
-            className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-card sm:flex sm:items-center sm:justify-between md:p-8"
-          >
-            <div className="min-w-0">
-              <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 text-primary">
-                <GraduationCap className="h-4 w-4" />
-              </div>
-              <h3 className="mt-3 font-display text-xl font-semibold">{e.school}</h3>
-              <p className="text-muted-foreground">{e.degree}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{e.detail}</p>
-            </div>
-            <span className="shrink-0 rounded-full border border-border bg-secondary px-3 py-1 font-mono text-xs text-muted-foreground">
-              {e.period}
-            </span>
-          </div>
-        ))}
-      </div>
-    </Section>
-  );
-}
+
 
 function Contact() {
   return (
