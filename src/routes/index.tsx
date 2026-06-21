@@ -122,20 +122,6 @@ const EXPERIENCE = [
   },
 ];
 
-const EDUCATION = [
-  {
-    school: "Savitribai Phule Pune University",
-    degree: "B.E. in Computer Engineering",
-    period: "2022 — 2026",
-    detail: "CGPA: 8.7 / 10 · Coursework in DSA, OS, DBMS, ML, Computer Networks.",
-  },
-  {
-    school: "Vidya Niketan Jr. College",
-    degree: "Higher Secondary (PCM + CS)",
-    period: "2020 — 2022",
-    detail: "Percentage: 89% · State board with Computer Science elective.",
-  },
-];
 
 function Portfolio() {
   return (
