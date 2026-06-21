@@ -403,32 +403,7 @@ function Experience() {
   );
 }
 
-function Education() {
-  return (
-    <Section id="education" eyebrow="05 — Education" title="Academic path">
-      <div className="space-y-5">
-        {EDUCATION.map((e) => (
-          <div
-            key={e.school}
-            className="grid grid-cols-[minmax(0,1fr)_auto] items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-card sm:flex sm:items-center sm:justify-between md:p-8"
-          >
-            <div className="min-w-0">
-              <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/15 text-primary">
-                <GraduationCap className="h-4 w-4" />
-              </div>
-              <h3 className="mt-3 font-display text-xl font-semibold">{e.school}</h3>
-              <p className="text-muted-foreground">{e.degree}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{e.detail}</p>
-            </div>
-            <span className="shrink-0 rounded-full border border-border bg-secondary px-3 py-1 font-mono text-xs text-muted-foreground">
-              {e.period}
-            </span>
-          </div>
-        ))}
-      </div>
-    </Section>
-  );
-}
+
 
 function Contact() {
   return (
