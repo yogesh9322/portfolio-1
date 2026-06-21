@@ -138,6 +138,7 @@ function Portfolio() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }
@@ -201,26 +202,42 @@ function Header() {
 function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-hero-glow">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-24 md:grid-cols-[1.4fr_1fr] md:py-32">
-        <div className="min-w-0">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 font-mono text-xs text-muted-foreground">
+      {/* Background profile photo - hero only */}
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-cover bg-center opacity-25 dark:opacity-20"
+        style={{ backgroundImage: `url(${yogeshPhoto})` }}
+      />
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/40"
+      />
+      <div className="relative mx-auto max-w-6xl px-6 py-24 md:py-32">
+        <div className="max-w-2xl">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 font-mono text-xs text-muted-foreground backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" /> Open to internships & grad roles
           </span>
           <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.05] sm:text-6xl md:text-7xl">
             Yogesh Pawar
           </h1>
-          <p className="mt-4 max-w-xl text-lg text-muted-foreground sm:text-xl">
-            Computer Engineering student crafting{" "}
-            <span className="text-foreground">full-stack apps</span>,{" "}
-            <span className="text-foreground">ML experiments</span> and tools that feel fast and
-            thoughtful.
+          <p className="mt-3 font-display text-xl text-gradient sm:text-2xl">
+            Java Spring Boot Developer
+          </p>
+          <p className="mt-5 max-w-xl text-lg text-muted-foreground sm:text-xl">
+            IT Engineering student with experience in{" "}
+            <span className="text-foreground">Java</span>,{" "}
+            <span className="text-foreground">Spring Boot</span>,{" "}
+            <span className="text-foreground">Docker</span>,{" "}
+            <span className="text-foreground">Kubernetes</span>, and{" "}
+            <span className="text-foreground">Linux</span>. Passionate about building scalable
+            applications and continuously learning modern software engineering technologies.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#projects"
               className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-glow transition-transform hover:scale-[1.02]"
             >
-              View my work <ArrowUpRight className="h-4 w-4" />
+              View Projects <ArrowUpRight className="h-4 w-4" />
             </a>
             <a
               href="/resume.pdf"
@@ -228,6 +245,12 @@ function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
             >
               <Download className="h-4 w-4" /> Download Resume
+            </a>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-secondary"
+            >
+              <Mail className="h-4 w-4" /> Contact Me
             </a>
           </div>
           <div className="mt-8 flex items-center gap-4 text-muted-foreground">
@@ -237,37 +260,12 @@ function Hero() {
             <a href="https://linkedin.com" aria-label="LinkedIn" className="transition-colors hover:text-foreground">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:yogesh@example.com" aria-label="Email" className="transition-colors hover:text-foreground">
+            <a href="mailto:yogesh.pawar@example.com" aria-label="Email" className="transition-colors hover:text-foreground">
               <Mail className="h-5 w-5" />
             </a>
             <span className="ml-2 inline-flex items-center gap-1.5 text-sm">
               <MapPin className="h-4 w-4" /> Pune, India
             </span>
-          </div>
-        </div>
-
-        <div className="relative hidden md:block">
-          <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-2xl" />
-          <div className="relative rounded-3xl border border-border bg-card/80 p-6 shadow-card">
-            <div className="flex items-center gap-1.5">
-              <span className="h-3 w-3 rounded-full bg-destructive/70" />
-              <span className="h-3 w-3 rounded-full bg-chart-4/70" />
-              <span className="h-3 w-3 rounded-full bg-primary/70" />
-              <span className="ml-3 font-mono text-xs text-muted-foreground">~/yogesh</span>
-            </div>
-            <pre className="mt-4 font-mono text-sm leading-relaxed text-muted-foreground">
-{`> whoami
-yogesh.pawar
-
-> focus
-- backend systems
-- applied ml
-- clean ui
-
-> currently
-building DevConnect &
-learning system design`}
-            </pre>
           </div>
         </div>
       </div>
