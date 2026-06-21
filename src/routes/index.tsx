@@ -133,7 +133,6 @@ function Portfolio() {
         <Skills />
         <Projects />
         <Experience />
-        <Experience />
         <Contact />
       </main>
       <Footer />
