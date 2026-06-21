@@ -16,6 +16,8 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
+import yogeshPhoto from "@/assets/yogesh.jpg";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const Route = createFileRoute("/")({
   head: () => ({
