@@ -8,10 +8,11 @@ const SYSTEM_PROMPT = `You are Yogesh Pawar's friendly AI assistant on his portf
 
 About Yogesh:
 - IT Engineering student and Java Spring Boot Developer
-- Skills: Java, Spring Boot, Docker, Kubernetes, Linux, REST APIs, PostgreSQL, Git
-- Also works with React, Node.js, TypeScript, Python
-- Internships: Software Engineering Intern at Infosys Springboard (May–Jul 2025), Web Development Intern at TechnoHacks Solutions (Dec 2024–Feb 2025)
-- Projects: Distributed E-Commerce Microservices, Smart Attendance System, DevConnect, AI Resume Analyzer, Campus Marketplace
+- Skills: Java 21, Spring Boot, Docker, Kubernetes, Linux, REST APIs, PostgreSQL, Git, Maven
+- Also works with React, Node.js, TypeScript, Python, FastAPI, Express, MongoDB, LangChain, RAG
+- Internships: Product Developer Intern at BMC Helix (May–Jul 2025), Software Engineering Intern at Infosys Springboard (Dec 2024–Feb 2025), Web Development Intern at TechnoHacks Solutions (Dec 2024–Feb 2025)
+- Education: B.E. IT at Pune Institute of Computer Technology (PICT) with 9.65 CGPA, Diploma IT at Government Polytechnic Ambad (93.03%)
+- Projects: AI-Powered School ERP — SmartAttend Rural, NovaDB — Custom Relational Database Management System, GramSetu AI — AI-Powered Rural Village Assistant
 - Based in Pune, India. Open to internships and graduate roles starting 2026
 - Contact: yogeshpawar.pict@gmail.com
 
@@ -22,31 +23,30 @@ function getFallbackResponse(userMessage: string): string {
   
   if (msg.includes("tech stack") || msg.includes("technologies") || msg.includes("skills") || msg.includes("stack") || msg.includes("tool")) {
     return `Yogesh's core tech stack is focused on backend engineering and Java technologies:
-• Core Backend: Java, Spring Boot, Spring Cloud, REST APIs
-• Databases & Cloud: PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Firebase
-• Frontend: React, Next.js, JavaScript, TypeScript, Tailwind CSS
-• Languages: Java, Python, C++, SQL
+• Core Backend: Java 21, Spring Boot, Spring Cloud, REST APIs, FastAPI, Maven
+• Databases & Cloud: PostgreSQL, MongoDB, Docker, Kubernetes, AWS, Firebase, Cloudinary, FAISS Vector Search
+• Frontend: React 19, Next.js, JavaScript, TypeScript, Tailwind CSS, Vite
+• Languages & AI: Java, Python, C++, SQL, LangChain, RAG, Groq API, Whisper, gTTS
 
-He is highly proficient in building scalable, containerized microservices and optimizing database schemas!`;
+He is highly proficient in building scalable database engines, microservices, and AI-powered applications!`;
   }
   
   if (msg.includes("project") || msg.includes("portfolio") || msg.includes("built") || msg.includes("work")) {
-    return `Yogesh has built several impressive projects:
-1. Distributed E-Commerce Microservices: A Spring Boot, Eureka, RabbitMQ, and Docker cloud backend.
-2. Smart Attendance System: Contactless face-recognition attendance using Python, OpenCV, Flask, and React.
-3. DevConnect: A MERN stack social hub for developers featuring real-time chats and Github integration.
-4. AI Resume Analyzer: An NLP Streamlit application using BERT embeddings to score resumes.
-5. Campus Marketplace: A peer-to-peer buy-sell portal built with Next.js and Supabase.
+    return `Yogesh has built three flagship projects:
+1. AI-Powered School ERP — SmartAttend Rural: MERN stack platform with Gemini AI insights, multilingual support (i18next), Socket.IO, and Cloudinary.
+2. NovaDB — Custom Relational Database Management System: Custom RDBMS built in Java 21 & Spring Boot with custom SQL parser, binary storage, indexing, and transaction management.
+3. GramSetu AI — Rural Village Assistant: AI assistance platform built with React, FastAPI, LangChain, RAG, Groq API, FAISS, OpenAI Whisper voice input, and gTTS.
 
 You can click on any project in the "Projects" section of his portfolio to open a detailed slide-over panel showing its key features and architecture!`;
   }
   
-  if (msg.includes("intern") || msg.includes("experience") || msg.includes("work") || msg.includes("job") || msg.includes("infosys")) {
-    return `Yogesh has completed two software engineering internships:
-1. Software Engineering Intern at Infosys Springboard (May 2025 — Jul 2025): Developed internal Node.js REST APIs, optimized PostgreSQL queries by 35% using indexed views, and wrote unit tests with Jest.
-2. Web Development Intern at TechnoHacks Solutions (Dec 2024 — Feb 2025): Built responsive web apps using React and Tailwind CSS, and integrated payments (Razorpay) and email automation.
+  if (msg.includes("intern") || msg.includes("experience") || msg.includes("work") || msg.includes("job") || msg.includes("bmc") || msg.includes("infosys")) {
+    return `Yogesh has professional experience across three key software engineering roles:
+1. Product Developer Intern at BMC Helix (May 2025 — Jul 2025): Hands-on exposure to ITSM workflows, product architecture, and enterprise software development.
+2. Software Engineering Intern at Infosys Springboard (Dec 2024 — Feb 2025): Developed Node.js & Spring Boot REST APIs, optimized PostgreSQL query performance by 35% with indexed views.
+3. Web Development Intern at TechnoHacks Solutions (Dec 2024 — Feb 2025): Built responsive web apps using React and Tailwind CSS, integrated Razorpay payments and email automation.
 
-He is currently looking for backend engineering internships and full-time roles starting in 2026!`;
+You can view details in the "Education & Experience" section of his portfolio!`;
   }
   
   if (msg.includes("contact") || msg.includes("email") || msg.includes("reach") || msg.includes("touch") || msg.includes("linkedin")) {
@@ -59,9 +59,10 @@ He is currently looking for backend engineering internships and full-time roles 
 You can also use the contact form at the bottom of the page to compose an email draft directly!`;
   }
 
-  if (msg.includes("education") || msg.includes("college") || msg.includes("university") || msg.includes("cgpa") || msg.includes("degree")) {
-    return `Yogesh is pursuing a Bachelor of Engineering in Information Technology at Savitribai Phule Pune University (graduating in 2026).
-He maintains an excellent cumulative CGPA of 8.7/10. His coursework includes Database Systems, Distributed Systems, Cloud Architecture, Object Oriented Programming, and Data Structures & Algorithms.`;
+  if (msg.includes("education") || msg.includes("college") || msg.includes("university") || msg.includes("cgpa") || msg.includes("pict") || msg.includes("degree")) {
+    return `Yogesh's educational background:
+• Bachelor of Engineering in IT at SCTR's Pune Institute of Computer Technology (PICT), Pune with 9.65 CGPA.
+• Diploma in Computer Engineering at Government Polytechnic Ambad with 93.03% (Distinction).`;
   }
 
   if (msg.includes("hello") || msg.includes("hi") || msg.includes("hey") || msg.includes("greet")) {

@@ -70,7 +70,7 @@ const NAV = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
+  { id: "experience", label: "Education & Experience" },
   { id: "certifications", label: "Certifications" },
   { id: "contact", label: "Contact" },
 ];
@@ -93,10 +93,8 @@ const SKILLS = [
     items: [
       { name: "Spring Boot", level: "Core", tooltip: "Used for microservices, JWT security, and RabbitMQ backend" },
       { name: "React", level: "Core", tooltip: "Used for DevConnect, Smart Attendance dashboard, and this portfolio" },
-      { name: "Next.js", level: "Familiar", tooltip: "Used for Campus Marketplace e-commerce front-end" },
       { name: "Node.js & Express", level: "Core", tooltip: "Used for REST APIs and real-time Socket.io integrations" },
-      { name: "TensorFlow", level: "Familiar", tooltip: "Used for neural network models and machine learning pipelines" },
-    ],
+      ],
   },
   {
     icon: Database,
@@ -116,154 +114,142 @@ const SKILLS = [
       { name: "Git & GitHub", level: "Core", tooltip: "Used for version control, branch management, and CI/CD actions" },
       { name: "Linux & Shell", level: "Core", tooltip: "Proficient in bash scripting, service configuration, and server setups" },
       { name: "Postman", level: "Core", tooltip: "Used for API contract testing and endpoints documentation" },
-      { name: "AWS", level: "Familiar", tooltip: "Managed EC2 compute, S3 assets, and RDS databases" },
-      { name: "Figma", level: "Familiar", tooltip: "Created prototypes and visual wireframes for UI layouts" },
     ],
   },
 ];
 
 const PROJECTS = [
   {
-    title: "Distributed E-Commerce Microservices",
-    description: "Cloud-native backend using Spring Boot, Spring Cloud, Docker, and PostgreSQL, implementing Eureka discovery and JWT security.",
-    longDescription: "A fully containerized e-commerce backend built with Java and Spring Boot. It uses a microservices architecture to segregate ordering, inventory, billing, and notifications. Services register with Eureka discovery and communicate asynchronously via RabbitMQ to ensure high availability and resistance to network partitions. Endpoints are secured via a unified Spring Cloud API Gateway handling JWT validation.",
-    category: "Java / Spring Boot",
-    tags: ["Java", "Spring Boot", "Spring Cloud", "Docker", "RabbitMQ", "PostgreSQL"],
-    features: [
-      "Eureka Discovery Server for microservice registration",
-      "API Gateway handling routing and JWT-based authentication",
-      "Resilience4j implementation for circuit breaking and rate limiting",
-      "RabbitMQ messaging for decoupling order creation and notification delivery",
-      "Containerized orchestration with Docker Compose files"
-    ],
-    github: "https://github.com/yogeshpawar/ecommerce-microservices",
-    link: "https://github.com/yogeshpawar/ecommerce-microservices"
-  },
-  {
-    title: "Smart Attendance System",
-    description: "Face-recognition based attendance platform using OpenCV and Flask, with a React dashboard for teachers and CSV exports.",
-    longDescription: "A touchless student attendance system built to automate registration processes in classrooms. It leverages Python and OpenCV to detect and recognize faces from a live camera feed. Recognized students are marked present in a MongoDB database in real-time, and teachers can manage rolls, view charts, and export attendance spreadsheets through a secure React client dashboard.",
-    category: "Machine Learning / Python",
-    tags: ["Python", "OpenCV", "Flask", "React", "MongoDB"],
-    features: [
-      "LBPH Face Recognition algorithm for high accuracy face verification",
-      "Real-time video feed streaming and face overlay annotations",
-      "CSV exports for attendance sheets",
-      "Interactive charts showing student attendance trends over time",
-      "Teacher dashboard with admin controls"
-    ],
-    github: "https://github.com/yogeshpawar/smart-attendance",
-    link: "https://github.com/yogeshpawar/smart-attendance"
-  },
-  {
-    title: "DevConnect — Developer Social Hub",
-    description: "Full-stack MERN application where developers share snippets, follow peers, and showcase projects with real-time notifications.",
-    longDescription: "A MERN stack social hub designed for web developers to share code snippets, write technical blogs, follow peers, and chat in real-time. It integrates with the GitHub API to automatically fetch and showcase users' repositories on their profiles. It leverages Socket.io for instantaneous typing notifications, chat messaging, and system alerts.",
+    title: "AI-Powered School ERP — SmartAttend Rural",
+    description: "An AI-powered School ERP designed to digitize school operations for rural schools with attendance tracking, leave management, multilingual support, and Gemini AI insights.",
+    longDescription: "An AI-powered School ERP designed to digitize school operations for rural schools. The platform streamlines attendance tracking, leave management, notices, reports, and parent–teacher communication through role-based dashboards for administrators, teachers, and parents. It integrates multilingual support, real-time notifications, cloud-based image storage, and Gemini AI-powered attendance insights and report generation.",
     category: "Full-Stack Web",
-    tags: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
+    tags: ["React.js", "Vite", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Socket.IO", "Gemini API", "Firebase", "Cloudinary", "i18next"],
     features: [
-      "GitHub API integration to pull user repository portfolios",
-      "Real-time text messaging and online status updates with Socket.io",
-      "Rich text editor supporting markdown code blocks with syntax highlighting",
-      "Feed page with likes, comments, and sorting algorithms"
+      "Role-Based Access Control with dedicated Admin, Teacher, and Parent dashboards using JWT authentication",
+      "Attendance & Leave Management for tracking student attendance, managing leave requests, and monitoring records",
+      "Gemini AI Integration for attendance insights, report generation, and AI-powered assistance",
+      "Real-Time Notifications using Socket.IO and Firebase Cloud Messaging",
+      "Multilingual Support with English, Hindi, and Marathi using i18next",
+      "Cloud Image Storage using Cloudinary, with responsive UI for desktop and mobile devices"
     ],
-    github: "https://github.com/yogeshpawar/devconnect",
-    link: "https://github.com/yogeshpawar/devconnect"
+    github: "https://github.com/yogeshpawar/smartattend-rural",
+    link: "https://smartattend-rural.vercel.app"  
   },
   {
-    title: "AI Resume Analyzer",
-    description: "NLP tool that scores resumes against job descriptions using TF-IDF and transformer embeddings, deployed on Streamlit.",
-    longDescription: "An automated recruitment assistant built with Python and Streamlit. It parses PDF resumes, extracts text content, and computes similarity scores against a user-provided job description. By employing natural language processing techniques (TF-IDF vectorizers and Sentence-Transformers), it highlights missing keywords, measures structural compliance, and suggests resume adjustments.",
-    category: "Machine Learning / Python",
-    tags: ["Python", "NLP", "Streamlit", "Transformers", "Scikit-Learn"],
+    title: "NovaDB — Mini Database Engine",
+    description: "A lightweight relational database management system (RDBMS) built from scratch using Java 21, featuring a custom SQL query engine, binary file storage, indexing, and transaction management.",
+    longDescription: "A lightweight relational database management system (RDBMS) built from scratch using Java 21, featuring a custom SQL query engine, binary file storage, indexing, and transaction management. It provides a RESTful API secured with JWT authentication and role-based access control (RBAC), alongside a React-based database administration console for managing databases, tables, and SQL queries.",
+    category: "Java / Spring Boot / React",
+    tags: ["Java 21", "Spring Boot", "React 19", "Vite", "Maven", "SQL", "JWT", "Spring Security", "REST APIs", "Binary File Storage", "Indexing", "Transactions"],
     features: [
-      "PyPDF2 parser to handle raw resume extractions",
-      "Cosine similarity comparison using sentence embeddings",
-      "Keyword extraction with NLTK to identify missing skills",
-      "Interactive feedback report showing match percentages and advice",
-      "Streamlit UI allowing fast PDF uploads and real-time analysis"
+      "Custom SQL tokenizer, recursive-descent parser, and query execution engine",
+      "Binary file-based storage with persistent catalog and table data",
+      "SQL operations including CREATE, INSERT, SELECT, UPDATE, DELETE, and filtering",
+      "Index management for efficient data retrieval",
+      "Transaction management with BEGIN, COMMIT, and ROLLBACK",
+      "JWT authentication with SUPER_ADMIN, DEVELOPER, and READ_ONLY roles",
+      "REST API integration using Spring Boot",
+      "Interactive React dashboard for database exploration and SQL execution"
     ],
-    github: "https://github.com/yogeshpawar/resume-analyzer",
-    link: "https://github.com/yogeshpawar/resume-analyzer"
+    github: "https://github.com/yogeshpawar/novadb",
+    link: "https://github.com/yogeshpawar/novadb"
   },
   {
-    title: "Campus Marketplace",
-    description: "A buy-sell platform for college students with authentication, chat, and image uploads, built on Next.js and Supabase.",
-    longDescription: "A secure, closed e-commerce platform built for college students to trade textbooks, instruments, and electronics. Using Next.js for SSR pages and Supabase as the backend database and authentication provider, it includes instant messaging, image uploading to Supabase Storage, and listing categorizations with location filters.",
-    category: "Full-Stack Web",
-    tags: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
+    title: "GramSetu AI — AI-Powered Rural Village Assistant",
+    description: "An AI-powered rural assistance platform designed to provide accessible information and intelligent support to rural communities using RAG, LLMs, and voice interaction.",
+    longDescription: "An AI-powered rural assistance platform designed to provide accessible information and intelligent support to rural communities. Built using React, Python, and FastAPI, it integrates Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and voice-based interaction to deliver context-aware responses to user queries. The platform combines document-based knowledge retrieval, speech-to-text processing, and text-to-speech capabilities to make information more accessible.",
+    category: "AI/ Machine Learning / Python",
+    tags: ["Python", "FastAPI", "React", "Vite", "LangChain", "RAG", "Groq API", "Hugging Face", "FAISS", "Whisper", "gTTS", "NLP"],
     features: [
-      "Supabase User Authentication and OAuth integration",
-      "Supabase Database with Row Level Security (RLS) policies",
-      "Supabase Bucket storage for managing product images",
-      "Real-time inbox linking buyers and sellers via instant chat"
+      "AI-powered conversational assistant for rural information and queries",
+      "Retrieval-Augmented Generation (RAG) for context-aware responses using knowledge documents",
+      "LangChain integration for retrieval and LLM orchestration",
+      "Groq API integration for AI-powered response generation",
+      "Hugging Face embeddings and FAISS vector search for semantic document retrieval",
+      "Voice input using OpenAI Whisper for speech-to-text conversion",
+      "Text-to-speech responses using gTTS",
+      "FastAPI-based backend exposing REST APIs",
+      "Interactive React dashboard built with Vite",
+      "Document-based knowledge processing and indexing for information retrieval"
     ],
-    github: "https://github.com/yogeshpawar/campus-marketplace",
-    link: "https://github.com/yogeshpawar/campus-marketplace"
+    github: "https://github.com/yogeshpawar/gramsetu-ai",
+    link: "https://github.com/yogeshpawar/gramsetu-ai"
   }
 ];
 
-const TIMELINE = [
+const EDUCATION = [
   {
-    type: "experience",
-    role: "Software Engineering Intern",
-    company: "Infosys Springboard",
-    period: "May 2025 — Jul 2025",
-    points: [
-      "Built internal REST APIs in Node.js consumed by 4 frontend teams.",
-      "Improved query performance by 35% by introducing indexed PostgreSQL views.",
-      "Wrote unit tests with Jest reaching 80% coverage on new modules.",
-    ],
-  },
-  {
-    type: "experience",
-    role: "Web Development Intern",
-    company: "TechnoHacks Solutions",
-    period: "Dec 2024 — Feb 2025",
-    points: [
-      "Developed responsive landing pages in React + Tailwind for 3 client projects.",
-      "Integrated Razorpay payments and email automation via Nodemailer.",
-      "Collaborated using Git, Jira and weekly agile standups.",
-    ],
-  },
-  {
-    type: "education",
     role: "Bachelor of Engineering in Information Technology",
-    company: "Savitribai Phule Pune University",
-    period: "2022 — 2026 (Expected)",
+    company: "SCTR's Pune Institute of Computer Technology, Pune",
+    period: "2024 — Present",
+    score: "Score: 9.65/10.0 CGPA",
+    description: "Currently pursuing a bachelor's degree with a strong academic record and focus on core IT concepts.",
     points: [
-      "Maintaining a solid cumulative CGPA of 8.7/10.",
       "Relevant Coursework: Database Management Systems, Distributed Systems, Cloud Architecture, Object Oriented Programming, Data Structures & Algorithms.",
-      "Active member and organizer at student tech symposia and code hacks.",
-    ],
+    ]
   },
+  {
+    role: "Diploma in Computer Engineering",
+    company: "Government Polytechnic Ambad",
+    period: "2021 — 2024",
+    score: "Score: 93.03% / Distinction",
+    description: "Completed diploma with distinction in Computer Engineering and fundamental engineering principles.",
+    points: [
+      "Specialized in core programming, web development fundamentals, and database systems."
+    ]
+  }
+];
+
+const EXPERIENCE = [
+  {
+    role: "Product Developer Intern",
+    company: "BMC Helix",
+    period: "Jan 2026 — Jun 2026",
+    points: [
+  "Containerized the Remote REST API Plugin using Docker to enable consistent deployment across environments.",
+  "Implemented Server-Sent Events (SSE) to replace request polling with real-time event streaming.",
+  "Worked with REST APIs, Docker, Git, and Linux in an enterprise development environment.",
+  "Gained practical experience in IT service management (ITSM), enterprise workflows, and professional software development practices."
+]
+  },
+ {
+  role: "Android Developer Intern",
+  company: "Mountreach Solution Pvt. Ltd., Amravati",
+  period: "Jan 2024 — Apr 2024",
+  points: [
+    "Developed Android applications using Java, XML, Firebase, and Android Studio.",
+    "Implemented Android features using Fragments, Text-to-Speech, Google Maps API, Bluetooth, and MediaPlayer.",
+    "Integrated Firebase services for backend connectivity and application data management."
+  ]
+}
 ];
 
 const CERTIFICATIONS = [
   {
-    title: "Oracle Certified Associate, Java SE Programmer",
-    issuer: "Oracle Corporation",
-    date: "Aug 2025",
-    pdf: "/Yogesh_Pawar_Resume.pdf",
-  },
-  {
-    title: "Spring Boot Framework Developer Certification",
-    issuer: "Spring Academy",
-    date: "Jun 2025",
-    pdf: "/Yogesh_Pawar_Resume.pdf",
-  },
-  {
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services",
-    date: "Apr 2025",
-    pdf: "/Yogesh_Pawar_Resume.pdf",
-  },
-  {
-    title: "HackerRank 5★ Java & Problem Solving",
-    issuer: "HackerRank",
-    date: "Ongoing",
-    pdf: "/Yogesh_Pawar_Resume.pdf",
-  }
+  title: "Machine Learning Certificate",
+  issuer: "Infosys Springboard",
+  date: "Jul 2026",
+  pdf: "/ML certificate springboard.pdf",
+},
+{
+  title: "Java Certification",
+  issuer: "Infosys Springboard",
+  date: "Jul 2026",
+  pdf: "/Java Infosys Springboard certificate yogesh.pdf",
+},
+{
+  title: "Impetus Certificate",
+  issuer: "Pune Institute of Computer Technology",
+  date: "Mar 2025",
+  pdf: "/IM-AD1027,Pune Institute of Computer Technology,Yogesh Pawar.pdf",
+},
+{
+  title: "AR/VR Certificate of Achievement",
+  issuer: "CDAC",
+  date: "Feb 2025",
+  pdf: "/Mr. Yogesh Sanjay Pawar.pdf",
+},
 ];
 
 const contactSchema = z.object({
@@ -354,24 +340,6 @@ function Portfolio() {
                   </div>
                 </div>
 
-                <div className="pt-6 border-t border-border/60 flex flex-col gap-3">
-                  <a 
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-semibold hover:bg-secondary transition-all hover:scale-[1.01] cursor-pointer"
-                  >
-                    <Github className="h-4 w-4" /> GitHub Repository
-                  </a>
-                  <a 
-                    href={selectedProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:opacity-95 transition-all hover:scale-[1.01] shadow-glow cursor-pointer"
-                  >
-                    <ExternalLink className="h-4 w-4" /> Go Live
-                  </a>
-                </div>
               </div>
             </SheetContent>
           )}
@@ -424,7 +392,7 @@ function Header() {
   Yogesh Pawar
 </span>
             <span className="flex items-center gap-1 font-mono text-[9px] font-bold uppercase tracking-wider text-primary">
-              <Sparkles className="h-2.5 w-2.5 animate-pulse" /> Spring Developer
+              <Sparkles className="h-2.5 w-2.5 animate-pulse" /> Java Developer
             </span>
           </div>
         </a>
@@ -509,11 +477,11 @@ function Hero() {
             </h1>
             
             <p className="font-display text-2xl font-bold text-gradient sm:text-3xl">
-              Java Spring Boot Developer
+              Java Developer
             </p>
             
             <p className="max-w-xl text-base text-muted-foreground sm:text-lg leading-relaxed">
-              Information Technology Engineering student with extensive experience building enterprise-grade backend systems using <span className="text-foreground font-semibold">Java</span>, <span className="text-foreground font-semibold">Spring Boot</span>, <span className="text-foreground font-semibold">Docker</span>, and <span className="text-foreground font-semibold">Linux</span>. Focused on creating resilient microservices, optimizing database pipelines, and designing clean code architecture.
+            Information Technology Engineering student with knowledge of <span>Java</span>, <span>Spring Boot</span>, <span>REST APIs</span>, <span>SQL</span>, and <span>Docker</span>. Interested in <span>backend development</span> and building practical software applications. Eager to learn new technologies and apply <span>problem-solving skills</span> to real-world projects.
             </p>
             
             <div className="flex flex-wrap gap-3.5 pt-2">
@@ -563,17 +531,20 @@ function Hero() {
 function Section({
   id,
   title,
+  subtitle,
   children,
 }: {
   id: string;
   title: string;
+  subtitle?: string;
   children: React.ReactNode;
 }) {
   return (
     <section id={id} className="border-t border-border/60 py-8 lg:py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mb-6">
+        <div className={`mb-8 ${subtitle ? "text-center max-w-2xl mx-auto space-y-2" : "mb-6"}`}>
           <h2 className="font-display text-2xl font-extrabold sm:text-3xl text-foreground">{title}</h2>
+          {subtitle && <p className="text-sm text-muted-foreground leading-relaxed">{subtitle}</p>}
         </div>
         {children}
       </div>
@@ -587,19 +558,21 @@ function About() {
       <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
           <p>
-            I'm a final-year Information Technology Engineering student with a passion for transforming complex computational concepts into robust, accessible, and user-centric software. My core expertise is situated in the backend, designing scalable relational schemas and managing microservice synchronization.
-          </p>
-          <p>
-            I enjoy problem-solving on a systems level: containerizing applications via Docker, deploying service registries in Spring Cloud, or automating administrative scripts on Linux nodes. I'm focused on writing unit-tested, self-documenting code and optimizing operations for peak efficiency.
-          </p>
+  I'm a final-year Information Technology Engineering student and a PPO recipient at BMC Helix, interested in building practical software applications. I have knowledge of Java, Spring Boot, REST APIs, SQL, React, Git, and Docker.
+
+I enjoy developing backend applications, working with databases, solving coding problems, and learning new technologies. I aim to write clean code and improve my development skills through real-world projects.
+</p>
+<p>
+  I enjoy problem-solving on a systems level: containerizing applications via Docker, deploying service registries in Spring Cloud, or automating administrative scripts on Linux nodes. I'm focused on writing unit-tested, self-documenting code and optimizing operations for peak efficiency.
+</p>
           
         </div>
         <div className="grid grid-cols-2 gap-4">
           {[
-            { k: "8.7", v: "Cumulative CGPA", desc: "SPPU University" },
-            { k: "12+", v: "Completed Projects", desc: "Backend & Web" },
+            { k: "9.65", v: "Cumulative CGPA", desc: "SPPU University" },
+            { k: "3+", v: "Completed Projects", desc: "Backend & Web" },
             { k: "2", v: "Internships Completed", desc: "Industry Experience" },
-            { k: "5★", v: "HackerRank Rank", desc: "Java & Problem Solving" },
+            { k: "PPO", v: "PPO Received", desc: "BMC Helix" },
           ].map((s) => (
             <div
               key={s.v}
@@ -752,42 +725,102 @@ function Projects({
 
 function Experience() {
   return (
-    <Section id="experience" title="Experience">
-      <div className="relative max-w-3xl mx-auto pl-8 before:absolute before:left-4 before:top-2 before:bottom-2 before:w-[2px] before:bg-border/60">
-        <div className="space-y-10">
-          {TIMELINE.map((item, idx) => (
-            <div key={idx} className="relative group">
-              {/* Connector dot */}
-              <span className="absolute -left-[25px] top-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full border border-background bg-card text-primary shadow-sm ring-4 ring-background transition-colors group-hover:bg-primary z-10">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary group-hover:bg-primary-foreground" />
-              </span>
-              
-              <div className="rounded-2xl border border-border bg-card p-4 sm:p-6 shadow-card transition-all hover:border-primary/35">
-                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        {item.type === "experience" ? <Briefcase className="h-3.5 w-3.5" /> : <GraduationCap className="h-3.5 w-3.5" />}
-                      </span>
-                      <h3 className="font-display text-lg font-bold text-foreground leading-snug">{item.role}</h3>
-                    </div>
-                    <p className="text-sm font-semibold text-muted-foreground pl-9">{item.company}</p>
-                  </div>
-                  <span className="self-start sm:self-center shrink-0 rounded-full border border-border bg-secondary/80 px-3.5 py-1 font-mono text-[10px] font-bold text-muted-foreground pl-3 pr-3">
+    <Section id="experience" title="Education & Experience">
+      <div className="grid gap-10 lg:grid-cols-2">
+        {/* Left Column: Education */}
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h3 className="font-display text-xl font-bold text-foreground">Education</h3>
+            <div className="h-0.5 w-10 rounded-full bg-primary" />
+          </div>
+
+          <div className="relative pl-7 space-y-8 before:absolute before:left-2.5 before:top-2.5 before:bottom-2.5 before:w-[2px] before:bg-border/70">
+            {EDUCATION.map((item, idx) => (
+              <div key={idx} className="relative group space-y-2.5">
+                {/* Node dot */}
+                <span className="absolute -left-[23px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary bg-background ring-4 ring-background transition-colors group-hover:bg-primary z-10">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary group-hover:bg-primary-foreground" />
+                </span>
+
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h4 className="font-display text-base font-bold text-foreground leading-snug">
+                    {item.role}
+                  </h4>
+                </div>
+
+                <div>
+                  <span className="inline-block rounded-md border border-border bg-secondary/80 px-2.5 py-0.5 font-mono text-xs font-semibold text-primary">
                     {item.period}
                   </span>
                 </div>
-                
-                <ul className="mt-5 space-y-2.5 text-sm leading-relaxed text-muted-foreground pl-9 list-disc marker:text-primary">
-                  {item.points.map((pt, idx) => (
-                    <li key={idx}>
-                      {pt}
-                    </li>
+
+                <p className="text-xs font-semibold italic text-muted-foreground underline decoration-border/60 underline-offset-4">
+                  {item.company}
+                </p>
+
+                {item.description && (
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                )}
+
+                {item.score && (
+                  <p className="text-xs font-bold text-foreground">
+                    {item.score}
+                  </p>
+                )}
+
+                {item.points && item.points.length > 0 && (
+                  <ul className="space-y-1.5 text-xs text-muted-foreground list-disc pl-4 marker:text-primary pt-1">
+                    {item.points.map((pt, pIdx) => (
+                      <li key={pIdx}>{pt}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Column: Professional Experience */}
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <h3 className="font-display text-xl font-bold text-foreground">Professional Experience</h3>
+            <div className="h-0.5 w-10 rounded-full bg-primary" />
+          </div>
+
+          <div className="relative pl-7 space-y-8 before:absolute before:left-2.5 before:top-2.5 before:bottom-2.5 before:w-[2px] before:bg-border/70">
+            {EXPERIENCE.map((item, idx) => (
+              <div key={idx} className="relative group space-y-2.5">
+                {/* Node dot */}
+                <span className="absolute -left-[23px] top-1.5 flex h-4 w-4 items-center justify-center rounded-full border-2 border-primary bg-background ring-4 ring-background transition-colors group-hover:bg-primary z-10">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary group-hover:bg-primary-foreground" />
+                </span>
+
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h4 className="font-display text-base font-bold text-foreground leading-snug">
+                    {item.role}
+                  </h4>
+                </div>
+
+                <div>
+                  <span className="inline-block rounded-md border border-border bg-secondary/80 px-2.5 py-0.5 font-mono text-xs font-semibold text-primary">
+                    {item.period}
+                  </span>
+                </div>
+
+                <p className="text-xs font-semibold italic text-muted-foreground underline decoration-border/60 underline-offset-4">
+                  {item.company}
+                </p>
+
+                <ul className="space-y-1.5 text-xs leading-relaxed text-muted-foreground list-disc pl-4 marker:text-primary pt-1">
+                  {item.points.map((pt, pIdx) => (
+                    <li key={pIdx}>{pt}</li>
                   ))}
                 </ul>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </Section>
@@ -796,7 +829,7 @@ function Experience() {
 
 function Certifications() {
   return (
-    <Section id="certifications" title="Certifications & Badges">
+    <Section id="certifications" title="Certifications">
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {CERTIFICATIONS.map((cert) => (
           <div 
