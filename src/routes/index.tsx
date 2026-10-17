@@ -80,40 +80,167 @@ const SKILLS = [
     icon: Code2,
     title: "Languages",
     items: [
-      { name: "Java", level: "Core", tooltip: "Used for Spring Boot microservices and data structures" },
-      { name: "Python", level: "Core", tooltip: "Used for OpenCV face-recognition and TF-IDF NLP model" },
-      { name: "JavaScript / TypeScript", level: "Core", tooltip: "Used for React interface, Next.js, and Node.js REST API backend" },
-      { name: "SQL", level: "Core", tooltip: "Used for PostgreSQL schema design and indexing optimization" },
-      { name: "C++", level: "Familiar", tooltip: "Used for competitive programming and core DSA" },
+      {
+        name: "Java",
+        level: "Core",
+        tooltip: "Used for object-oriented programming, backend development, Spring Boot applications, and DSA"
+      },
+      {
+        name: "Python",
+        level: "Core",
+        tooltip: "Used for scripting, application development, automation, and problem solving"
+      },
+      {
+        name: "C++",
+        level: "Core",
+        tooltip: "Used for data structures, algorithms, competitive programming, and problem solving"
+      },
+      {
+        name: "JavaScript",
+        level: "Core",
+        tooltip: "Used for frontend and backend web application development"
+      },
+      {
+        name: "TypeScript",
+        level: "Core",
+        tooltip: "Used for building type-safe and maintainable web applications"
+      },
+      {
+        name: "SQL",
+        level: "Core",
+        tooltip: "Used for database queries, schema design, data manipulation, and relational databases"
+      },
+      {
+        name: "HTML",
+        level: "Core",
+        tooltip: "Used for structuring responsive web applications and interfaces"
+      },
+      {
+        name: "CSS",
+        level: "Core",
+        tooltip: "Used for styling, responsive layouts, and modern web interfaces"
+      },
+      {
+        name: "PHP",
+        level: "Familiar",
+        tooltip: "Used for server-side web development and backend programming"
+      },
     ],
   },
+
   {
     icon: Cpu,
-    title: "Frameworks",
+    title: "Frameworks & Technologies",
     items: [
-      { name: "Spring Boot", level: "Core", tooltip: "Used for microservices, JWT security, and RabbitMQ backend" },
-      { name: "React", level: "Core", tooltip: "Used for DevConnect, Smart Attendance dashboard, and this portfolio" },
-      { name: "Node.js & Express", level: "Core", tooltip: "Used for REST APIs and real-time Socket.io integrations" },
-      ],
+      {
+        name: "Spring Boot",
+        level: "Core",
+        tooltip: "Used for building Java backend applications, REST APIs, microservices, and security"
+      },
+      {
+        name: "React.js",
+        level: "Core",
+        tooltip: "Used for building component-based and responsive web interfaces"
+      },
+      {
+        name: "Node.js",
+        level: "Core",
+        tooltip: "Used for server-side JavaScript and backend application development"
+      },
+      {
+        name: "Express.js",
+        level: "Core",
+        tooltip: "Used for building REST APIs and backend services with Node.js"
+      },
+      {
+        name: "Android",
+        level: "Core",
+        tooltip: "Used for Android application development and mobile application testing"
+      },
+      {
+        name: "Docker",
+        level: "Core",
+        tooltip: "Used for containerization, application packaging, and deployment workflows"
+      },
+    ],
   },
+
   {
     icon: Database,
     title: "Databases & Cloud",
     items: [
-      { name: "PostgreSQL", level: "Core", tooltip: "Optimized indexed views and query efficiency by 35%" },
-      { name: "MongoDB", level: "Core", tooltip: "Stored user profiles, posts, and real-time messages in DevConnect" },
-      { name: "Docker", level: "Core", tooltip: "Containerized Java Spring Boot microservices for deployment pipelines" },
-      { name: "Kubernetes", level: "Familiar", tooltip: "Configured local clusters for service orchestration and scaling" },
-      { name: "Supabase / Firebase", level: "Familiar", tooltip: "Used for real-time authentication and database backends" },
+      {
+        name: "MySQL",
+        level: "Core",
+        tooltip: "Used for relational database design, SQL queries, and data management"
+      },
+      {
+        name: "MongoDB",
+        level: "Core",
+        tooltip: "Used for NoSQL data storage and application development"
+      },
+      {
+        name: "PostgreSQL",
+        level: "Core",
+        tooltip: "Used for relational database management, SQL queries, and backend applications"
+      },
+      {
+        name: "Firebase",
+        level: "Familiar",
+        tooltip: "Used for application backend services, authentication, and real-time data"
+      },
+      {
+        name: "Cloud Computing",
+        level: "Familiar",
+        tooltip: "Knowledge of cloud computing concepts, services, deployment, and distributed applications"
+      },
+      {
+        name: "Kubernetes",
+        level: "Familiar",
+        tooltip: "Used for container orchestration, service management, and local cluster experimentation"
+      },
     ],
   },
+
   {
     icon: Wrench,
     title: "DevOps & Tools",
     items: [
-      { name: "Git & GitHub", level: "Core", tooltip: "Used for version control, branch management, and CI/CD actions" },
-      { name: "Linux & Shell", level: "Core", tooltip: "Proficient in bash scripting, service configuration, and server setups" },
-      { name: "Postman", level: "Core", tooltip: "Used for API contract testing and endpoints documentation" },
+      {
+        name: "Git & GitHub",
+        level: "Core",
+        tooltip: "Used for version control, branch management, collaboration, and CI/CD workflows"
+      },
+      {
+        name: "GitHub Copilot",
+        level: "Core",
+        tooltip: "Used for AI-assisted coding, code completion, refactoring, and development support"
+      },
+      {
+        name: "Cursor",
+        level: "Core",
+        tooltip: "Used as an AI-powered code editor for development, debugging, and codebase assistance"
+      },
+      {
+        name: "Claude",
+        level: "Core",
+        tooltip: "Used for AI-assisted coding, problem solving, code review, and development workflows"
+      },
+      {
+        name: "Antigravity",
+        level: "Core",
+        tooltip: "Used for AI-assisted application development, prototyping, and project workflows"
+      },
+      {
+        name: "Postman",
+        level: "Core",
+        tooltip: "Used for API testing, endpoint validation, contract testing, and API documentation"
+      },
+      {
+        name: "Android Studio",
+        level: "Core",
+        tooltip: "Used for Android application development, debugging, testing, and emulator-based development"
+      },
     ],
   },
 ];
@@ -133,7 +260,7 @@ const PROJECTS = [
       "Multilingual Support with English, Hindi, and Marathi using i18next",
       "Cloud Image Storage using Cloudinary, with responsive UI for desktop and mobile devices"
     ],
-    github: "https://github.com/yogeshpawar/smartattend-rural",
+    github: "https://github.com/yogesh9322/smart-attend-rural",
     link: "https://smartattend-rural.vercel.app"  
   },
   {
@@ -152,14 +279,14 @@ const PROJECTS = [
       "REST API integration using Spring Boot",
       "Interactive React dashboard for database exploration and SQL execution"
     ],
-    github: "https://github.com/yogeshpawar/novadb",
+    github: "https://github.com/yogesh9322/Mini-Database-Engine",
     link: "https://github.com/yogeshpawar/novadb"
   },
   {
     title: "GramSetu AI — AI-Powered Rural Village Assistant",
     description: "An AI-powered rural assistance platform designed to provide accessible information and intelligent support to rural communities using RAG, LLMs, and voice interaction.",
     longDescription: "An AI-powered rural assistance platform designed to provide accessible information and intelligent support to rural communities. Built using React, Python, and FastAPI, it integrates Retrieval-Augmented Generation (RAG), Large Language Models (LLMs), and voice-based interaction to deliver context-aware responses to user queries. The platform combines document-based knowledge retrieval, speech-to-text processing, and text-to-speech capabilities to make information more accessible.",
-    category: "AI/ Machine Learning / Python",
+    category: "Machine Learning / Python / AI",
     tags: ["Python", "FastAPI", "React", "Vite", "LangChain", "RAG", "Groq API", "Hugging Face", "FAISS", "Whisper", "gTTS", "NLP"],
     features: [
       "AI-powered conversational assistant for rural information and queries",
@@ -173,8 +300,8 @@ const PROJECTS = [
       "Interactive React dashboard built with Vite",
       "Document-based knowledge processing and indexing for information retrieval"
     ],
-    github: "https://github.com/yogeshpawar/gramsetu-ai",
-    link: "https://github.com/yogeshpawar/gramsetu-ai"
+    github: "https://github.com/yogesh9322/GramSetu-AI",
+    link: "https://github.com/yogesh9322/GramSetu-AI"
   }
 ];
 
@@ -266,12 +393,40 @@ function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredProjects = PROJECTS.filter((p) => {
+    const query = searchQuery.trim().toLowerCase();
+    const searchTerms = query.split(/\s+/).filter(Boolean);
+
     const matchesSearch =
-      p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === "All" || p.category === selectedCategory;
+      searchTerms.length === 0 ||
+      searchTerms.every(
+        (term) =>
+          p.title.toLowerCase().includes(term) ||
+          p.description.toLowerCase().includes(term) ||
+          p.longDescription.toLowerCase().includes(term) ||
+          p.category.toLowerCase().includes(term) ||
+          p.tags.some((t) => t.toLowerCase().includes(term)) ||
+          p.features.some((f) => f.toLowerCase().includes(term))
+      );
+
+    const matchesCategory =
+      selectedCategory === "All" ||
+      (selectedCategory === "Java" &&
+        (p.category.toLowerCase().includes("java") ||
+          p.tags.some((t) => t.toLowerCase().includes("java")))) ||
+      (selectedCategory === "Full-Stack Web" &&
+        (p.category.toLowerCase().includes("web") ||
+          p.category.toLowerCase().includes("full-stack"))) ||
+      (selectedCategory === "Machine Learning" &&
+        (p.category.toLowerCase().includes("machine learning") ||
+          p.category.toLowerCase().includes("ai") ||
+          p.tags.some(
+            (t) =>
+              t.toLowerCase().includes("ai") ||
+              t.toLowerCase().includes("ml") ||
+              t.toLowerCase().includes("rag") ||
+              t.toLowerCase().includes("nlp")
+          )));
+
     return matchesSearch && matchesCategory;
   });
 
@@ -340,6 +495,20 @@ function Portfolio() {
                   </div>
                 </div>
 
+                {selectedProject.github && (
+                  <div className="pt-4 border-t border-border/60">
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:scale-[1.01] hover:opacity-95 active:scale-100 cursor-pointer"
+                    >
+                      <Github className="h-4.5 w-4.5" />
+                      GitHub Repository
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                )}
               </div>
             </SheetContent>
           )}
@@ -642,7 +811,7 @@ function Projects({
   setSelectedCategory,
   setSelectedProject,
 }: ProjectsProps) {
-  const categories = ["All", "Java / Spring Boot", "Full-Stack Web", "Machine Learning / Python"];
+  const categories = ["All", "Java", "Full-Stack Web", "Machine Learning"];
 
   return (
     <Section id="projects" title="Projects">
@@ -656,14 +825,25 @@ function Projects({
               placeholder="Search projects by name or technology..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full rounded-xl border border-border bg-card px-10 py-2.5 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+              className="w-full rounded-xl border border-border bg-card pl-10 pr-9 py-2.5 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
             />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                aria-label="Clear search"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
           </div>
           
           <div className="flex flex-wrap gap-1.5 bg-secondary/40 border border-border/50 p-1.5 rounded-xl">
             {categories.map((cat) => (
               <button
                 key={cat}
+                type="button"
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-lg px-3.5 py-1.5 text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === cat
@@ -671,7 +851,7 @@ function Projects({
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
-                {cat.split(" / ")[0]}
+                {cat}
               </button>
             ))}
           </div>
@@ -683,6 +863,7 @@ function Projects({
             {filteredProjects.map((p) => (
               <button
                 key={p.title}
+                type="button"
                 onClick={() => setSelectedProject(p)}
                 className="group flex flex-col text-left rounded-2xl border border-border bg-card p-6 shadow-card transition-all hover:-translate-y-1 hover:border-primary/50 cursor-pointer"
               >
@@ -714,8 +895,18 @@ function Projects({
             ))}
           </div>
         ) : (
-          <div className="rounded-2xl border border-dashed border-border/80 p-12 text-center text-muted-foreground">
-            No projects found matching your search parameters. Try adjusting filters!
+          <div className="rounded-2xl border border-dashed border-border/80 p-12 text-center text-muted-foreground space-y-3">
+            <p className="text-sm">No projects found matching your search parameters.</p>
+            <button
+              type="button"
+              onClick={() => {
+                setSearchQuery("");
+                setSelectedCategory("All");
+              }}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-secondary/80 px-3.5 py-1.5 text-xs font-semibold text-foreground hover:bg-secondary transition-colors cursor-pointer"
+            >
+              Reset filters & search
+            </button>
           </div>
         )}
       </div>
@@ -949,7 +1140,7 @@ function Contact() {
             </a>
             
             <a
-              href="https://github.com"
+              href="https://github.com/yogesh9322/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3.5 text-foreground transition-colors hover:text-primary group"
