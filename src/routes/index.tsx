@@ -34,6 +34,7 @@ import {
   Phone,
   Instagram,
   ArrowUp,
+  Globe,
 } from "lucide-react";
 import yogeshPhoto from "@/assets/yogesh.jpg";
 import { ChatWidget } from "@/components/ChatWidget";
@@ -280,7 +281,7 @@ const PROJECTS = [
       "Interactive React dashboard for database exploration and SQL execution"
     ],
     github: "https://github.com/yogesh9322/Mini-Database-Engine",
-    link: "https://github.com/yogeshpawar/novadb"
+    link: "https://github.com/yogesh9322/Mini-Database-Engine"
   },
   {
     title: "GramSetu AI — AI-Powered Rural Village Assistant",
@@ -301,7 +302,7 @@ const PROJECTS = [
       "Document-based knowledge processing and indexing for information retrieval"
     ],
     github: "https://github.com/yogesh9322/GramSetu-AI",
-    link: "https://github.com/yogesh9322/GramSetu-AI"
+    link: "https://gram-setu-ai.vercel.app"
   }
 ];
 
@@ -495,8 +496,8 @@ function Portfolio() {
                   </div>
                 </div>
 
-                {selectedProject.github && (
-                  <div className="pt-4 border-t border-border/60">
+                <div className="pt-4 border-t border-border/60 flex flex-col gap-3">
+                  {selectedProject.github && (
                     <a
                       href={selectedProject.github}
                       target="_blank"
@@ -507,8 +508,21 @@ function Portfolio() {
                       GitHub Repository
                       <ExternalLink className="h-4 w-4" />
                     </a>
-                  </div>
-                )}
+                  )}
+
+                  {selectedProject.link && (
+                    <a
+                      href={selectedProject.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-bold text-primary-foreground shadow-glow transition-all hover:scale-[1.01] hover:opacity-95 active:scale-100 cursor-pointer"
+                    >
+                      <Globe className="h-4.5 w-4.5" />
+                      Go Live
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
+                </div>
               </div>
             </SheetContent>
           )}
